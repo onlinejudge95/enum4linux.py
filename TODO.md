@@ -1,5 +1,5 @@
 1. Create CLI module
-    * Create a CLI entrypoint to the module (better to use click)
+    * ~~Create a CLI entrypoint to the module (better to use click)~~
     * This step needs thinking as to what all options are we providing,
     ideally all the individual enumeration should be coupled into buckets(up to the extent that makes sense) and provided as individual commands.
     * There should be a command to run all the enumerations in one pass.

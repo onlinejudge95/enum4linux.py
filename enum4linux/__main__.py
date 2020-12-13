@@ -1,10 +1,18 @@
 import click
 
 
-@click.command()
+@click.group()
 def main():
-    print("Hello, World!")
+    pass
 
 
-if __name__ == "__main__":
-    main()
+@main.command()
+@click.argument("ip", required=True, type=str)
+def enumerate(ip):
+    click.echo(f"Hello, {ip}!")
+
+
+@main.command()
+@click.argument("ip", required=True, type=str)
+def all(ip):
+    click.echo(f"Hello, {ip}!!")
