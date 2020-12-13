@@ -2,6 +2,8 @@ from pathlib import Path
 
 from setuptools import setup
 
+from enum4linux import __version__ as VERSION
+
 
 CURRENT_WORKING_DIR = Path.cwd()
 README_FILE = CURRENT_WORKING_DIR / "README.md"
@@ -10,7 +12,7 @@ REQUIREMENTS_FILE = CURRENT_WORKING_DIR / "requirements.txt"
 
 setup(
     name="enum4linux.py",
-    version="0.0.0a0",
+    version=VERSION,
     description="Port for enum4linux perl script",
     long_description_content_type="text/markdown",
     long_description=README_FILE.read_text(),
