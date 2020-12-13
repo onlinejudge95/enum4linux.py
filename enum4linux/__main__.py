@@ -8,6 +8,12 @@ def main():
 
 @main.command()
 @click.argument("ip", required=True, type=str)
+@click.option("-u", "--user-list", is_flag=True, help="Get user list details")
+@click.option("-m", "--machine-list", is_flag=True, help="Get machine list details")
+@click.option("-s", "--share-list", is_flag=True, help="Get share list details")
+@click.option("-p", "--password-policy", is_flag=True, help="Get password policy details")
+@click.option("-g", "--group-list", is_flag=True, help="Get group list details")
+@click.option("-d", "--detailed", is_flag=True, help="Get detailed output, applies to -u & -s")
 def enumerate(ip):
     click.echo(f"Hello, {ip}!")
 

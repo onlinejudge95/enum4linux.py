@@ -23,7 +23,7 @@ setup(
     install_requires=REQUIREMENTS_FILE.read_text(),
     entry_points={
         "console_scripts": [
-            "enum4linux=enum4linux.__main__:main"
+            "enum4linux=enum4linux.__main__:entrypoint"
         ]
     }
 )
