@@ -2,7 +2,23 @@ version: 2
 
 updates:
   - package-ecosystem: pip
-    directory: "/"
+    directory: "/requirements.txt"
+    schedule:
+      interval: daily
+      timezone: Asia/Calcutta
+    assignees:
+      - "dependabot"
+    labels:
+      - "dependencies"
+      - "dependabot"
+      - "python"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "onlinejudge95"
+    target-branch: master
+
+  - package-ecosystem: pip
+    directory: "/requirements-test.txt"
     schedule:
       interval: daily
       timezone: Asia/Calcutta
