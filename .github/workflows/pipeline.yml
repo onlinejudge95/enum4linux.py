@@ -58,7 +58,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: ${{ metrix.python }}
+        python-version: ${{ matrix.python }}
 
     - name: Install dependencies
       run: |
@@ -70,7 +70,7 @@ jobs:
 
     needs: [lint, build]
 
-    if: github.event.pull_request.merged == 'true'
+    if: ${{ github.event.pull_request.merged == 'true' }}
 
     steps:
     - uses: actions/checkout@v2
