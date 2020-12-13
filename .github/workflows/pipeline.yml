@@ -1,6 +1,11 @@
 name: pipeline
 
-on: [pull_request]
+on:
+  push:
+    - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   lint:
@@ -70,7 +75,7 @@ jobs:
 
     needs: [lint, build]
 
-    if: ${{ github.event.pull_request.merged == 'true' }}
+    if: ${{ github.event_name == 'push' }}
 
     steps:
     - uses: actions/checkout@v2
