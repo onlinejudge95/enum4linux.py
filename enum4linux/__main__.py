@@ -27,11 +27,11 @@ def main():
     is_flag=True,
     help="Get detailed output, applies to -u & -s",
 )
-def enumerate(ip):
+def scan(ip):
     click.echo(f"Hello, {ip}!")
 
 
 @main.command()
 @click.argument("ip", required=True, type=str)
-def all(ip):
+def fullscan(ip):
     click.echo(f"Hello, {ip}!!")
