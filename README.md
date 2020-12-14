@@ -1,6 +1,8 @@
 enum4linux.py
 =============
 
+[![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/onlinejudge95/enum4linux.py/?ref=repository-badge)
+
 ## Intro
 This repository tries to port the `enum4linux` utility from it's native perl version to python.
 
