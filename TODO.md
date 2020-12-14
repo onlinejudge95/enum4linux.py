@@ -9,3 +9,4 @@
 3. Port all perl `sub`s to corresponding methods
     * For time being simply port the `sub`s to python methods in a separate module.
     * Later see if we can abstract out common code and if we can use Object-Oriented approaches here.
+4. Check for automated version bumps setup
